@@ -1429,26 +1429,3 @@ NULL       961         23          NULL
 (23 rows affected)
 */
 
-
-
-
-
-
-
-
-
-SELECT ISNUMERIC('a344')
-SELECT ISDATE('2023-11-33')
-
-SELECT CONCAT_WS(CHAR(10),'Hello',GETDATE(),5566.44, 900, NULL)
-/*
-------------------------------------------------------------------------------------------------------
-Hello
-Mar 30 2023  3:23PM
-5566.44
-900
-*/
-SELECT ISDATE(NULL)
-DECLARE @RESULT VARCHAR(100)
-SELECT @RESULT = CONCAT_WS(CHAR(10),NULL, NULL, NULL) 
-IF @RESULT = '' PRINT 'Empty string 123'
